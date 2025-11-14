@@ -9,20 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body id="top">
 
+<body id="top">
   <!-- 導覽列 -->
   <header class="nav">
-    <a class="brand" href="#top">TZU-CHIN LIAO</a>
+    <a href="#" class="top-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" 
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </a>
     <nav class="links">
       <a href="#skills">技能</a>
       <a href="#exp">經歷</a>
       <a href="#work">作品</a>
       <a href="#contact">聯絡</a>
     </nav>
-    <button class="menu" aria-label="menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu" aria-label="menu"><span></span><span></span><span></span></button>
   </header>
 
   <main>
@@ -33,7 +37,12 @@
         <img class="avatar" src="images/profile.png" alt="個人頭像" />
         <div class="info">
           <h1 class="name">廖子晴</h1>
-          <p class="tag">中原大學資管系二年級｜在嘗試找到屬於自己的路</p>
+          <p class="tag">中原大學資管系二年級｜From not knowing, to understanding, to delivering.</p>
+          <p class="intro-text">
+            我是主動學習型的人，遇到不懂的內容會查資料、做筆記並練到會為止。
+            高中累積英文與科技相關競賽經驗，大學後則專注程式實作與跨領域課程。
+            我做事細心、有耐性，也喜歡整理資訊、拆解問題並找到可行解法。
+          </p>
           <div class="actions">
             <a class="btn p" href="#work">看作品</a>
             <a class="btn g" href="#contact">聯絡我</a>
@@ -42,68 +51,158 @@
       </div>
     </section>
 
-    <!-- 技能 -->
+    <!-- 技能：兩張卡片&四個圓形百分比 -->
     <section id="skills" class="sec">
-      <h2 class="title">技能 Skills</h2>
+      <h2 class="title">技能</h2>
 
       <div class="skills">
+        <!-- 程式語言卡片 -->
         <article class="card fade">
           <h3>程式語言</h3>
-          <ul class="list">
-            <li><span><i class="fa-solid fa-code"></i>Dart</span><div class="bar"><i style="width:80%"></i></div></li>
-            <li><span><i class="fa-brands fa-java"></i>Java</span><div class="bar"><i style="width:75%"></i></div></li>
-            <li><span><i class="fa-brands fa-python"></i>Python</span><div class="bar"><i style="width:85%"></i></div></li>
-            <li><span><i class="fa-brands fa-html5"></i>HTML</span><div class="bar"><i style="width:90%"></i></div></li>
-          </ul>
+          <div class="s-grid">
+            <div class="s-item">
+              <div class="circle"  data-val="80">
+                <span>80%</span>
+              </div>
+              <p>Dart</p>
+            </div>
+            <div class="s-item">
+              <div class="circle" data-val="65">
+                <span>65%</span>
+              </div>
+              <p>Java</p>
+            </div>
+            <div class="s-item">
+              <div class="circle" data-val="78">
+                <span>78%</span>
+              </div>
+              <p>Python</p>
+            </div>
+            <div class="s-item">
+              <div class="circle" data-val="90">
+                <span>90%</span>
+              </div>
+              <p>HTML</p>
+            </div>
+          </div>
         </article>
 
+        <!-- 設計與工具卡片 -->
         <article class="card fade">
           <h3>設計與工具</h3>
-          <ul class="list">
-            <li><span><i class="fa-brands fa-figma"></i>Figma</span><div class="bar"><i style="width:85%"></i></div></li>
-            <li><span><i class="fa-brands fa-git-alt"></i>Git</span><div class="bar"><i style="width:80%"></i></div></li>
-            <li><span><i class="fa-solid fa-wand-magic-sparkles"></i>Canva</span><div class="bar"><i style="width:85%"></i></div></li>
-            <li><span><i class="fa-solid fa-database"></i>MySQL</span><div class="bar"><i style="width:70%"></i></div></li>
-          </ul>
+          <div class="s-grid">
+            <div class="s-item">
+              <div class="circle" data-val="85">
+                <span>85%</span>
+              </div>
+              <p>Figma</p>
+            </div>
+            <div class="s-item">
+              <div class="circle" data-val="75">
+                <span>75%</span>
+              </div>
+              <p>Git</p>
+            </div>
+            <div class="s-item">
+              <div class="circle" data-val="82">
+                <span>82%</span>
+              </div>
+              <p>Canva</p>
+            </div>
+            <div class="s-item">
+              <div class="circle" data-val="60">
+                <span>60%</span>
+              </div>
+              <p>MySQL</p>
+            </div>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- 經歷 -->
     <section id="exp" class="sec alt">
-      <h2 class="title">經歷 Experience</h2>
+      <h2 class="title">經歷</h2>
 
       <ol class="line">
+        <!-- 經歷 1：AI 教與學競賽 -->
         <li class="item rise">
-          <time>2025 – Now</time>
-          <div>
-            <h3>中原大學 資訊管理系 / 生技保健食品跨領域學分學程</h3>
-            <p class="indent">修習課程：Python 程式設計、Java 程式設計、資料庫管理、中醫藥學、營養學</p>
-            <p class="indent">GPA：4.0</p>
+          <time class="exp-date">2025 / 09 / 02</time>
+          <div class="exp-card">
+            <div class="exp-text">
+              <h3 class="exp-title">AI 教與學標竿課程競賽 — 學生組佳作</h3>
+              <p>
+                在這次競賽中，我們從資料蒐集、內容規劃、流程設計到簡報呈現，
+                都以系統化方式進行完整的專案製作。我們以「系統化學習流程」為核心，
+                實際示範如何利用 AI 工具提升資訊整理、內容產生與展示效率。
+              </p>
+              <br>
+              <p>
+                在過程中，我使用 ChatGPT、NotebookLM、Windsurf 等工具來協助資料分析、文字撰寫與視覺化整理，
+                並整合這些輸出設計出更清晰的敘事架構。這次經驗讓我熟悉跨工具協作、資訊重組、內容呈現與專案合作，
+                也真正理解 AI 如何介入學習與內容製作流程，並提升整體產出品質與效率。
+              </p>
+            </div>
+            <img class="exp-img" src="images/award.png" alt="AI 教與學標竿課程競賽獎狀照片">
           </div>
         </li>
 
+        <!-- 經歷 2：GrowthHub 專案 -->
         <li class="item rise">
-          <time>2021 – 2023</time>
-          <div>
-            <h3>新北高工 資訊處理系</h3>
+          <time class="exp-date">2024 / 12 / 20</time>
+          <div class="exp-card">
+            <div class="exp-text">
+              <h3 class="exp-title">GrowthHub 任務系統</h3>
+              <p>
+                GrowthHub 是我以 Flutter 開發的個人任務管理系統，是一個從介面到資料儲存都完整串起來的應用專案。
+                開發過程中，我以 ChatGPT 作為主要協作工具，負責理解程式架構、調整邏輯、修正錯誤並確保專案能在
+                 Android Studio 中順利執行。
+              </p>
+              <br>
+              <p>
+                在三個月的開發中，我實際面對並解決多種常見開發問題，例如 pubspec.yaml 無法讀取、Android Studio 
+                因 SDK 與版本相容性無法執行、Widget constructor 改版造成不相容等。透過查詢資料、與 AI 反覆對話、
+                測試與修正，我學會如何在有限知識下推進進度、找出錯誤來源並讓專案完整跑起來。
+              </p>
+            </div>
+            <img class="exp-img" src="images/growthub.png" alt="GrowthHub 任務系統專案畫面">
+          </div>
+        </li>
+
+        <!-- 經歷 3：高中 ESP 競賽 -->
+        <li class="item rise">
+          <time class="exp-date">2023 / 03 / 11</time>
+          <div class="exp-card">
+            
+            <div class="exp-text">
+              <h3 class="exp-title">ESP 科學與科普專業英文能力大賽</h3>
+              <p>
+                高中期間，我參加過 PVQC 與 ESP 科普專業英文能力大賽等競賽，內容涵蓋大量專業英文詞彙、技術文件理解、
+                聽力與 AI 主題的解說。準備過程需要反覆整理資料、建立記憶策略並理解英文內容背後的概念，逐漸讓我熟悉
+                如何閱讀技術型英文並將其轉換成清楚的口語表達。
+              </p>
+              <br>
+              <p>
+                這些經驗讓我在後續學習中受益很大：無論是查詢英文技術文件、製作報告，或閱讀資訊領域的文章，我都能更快
+                理解內容，在面對程式語言、AI 工具或資訊安全相關教材時能更快上手，並能在團隊合作或簡報場合中清楚解釋技術概念。
+              </p>
+            </div>
+            <img class="exp-img" src="images/esp.jpg" alt="ESP 科學與科普專業英文能力大賽頒獎合照">
           </div>
         </li>
       </ol>
-
     </section>
 
     <!-- 作品 -->
     <section id="work" class="sec">
-      <h2 class="title">作品 Portfolio</h2>
-
+      <h2 class="title">作品</h2>
       <div class="works">
         <a class="work hover" href="https://github.com/liao950715?tab=repositories" target="_blank" rel="noreferrer">
           <figure>
             <img src="https://picsum.photos/600/400?random=11" alt="GrowthHub 封面圖" />
             <figcaption>
               <h3>GrowthHub</h3>
-              <p>任務系統 × 遊戲化介面（Flutter / 視覺設計）</p>
+              <p>任務系統 × 遊戲化介面（Flutter / SQLite / 視覺設計）</p>
             </figcaption>
           </figure>
         </a>
@@ -122,13 +221,21 @@
 
     <!-- 聯絡 -->
     <section id="contact" class="sec alt">
-      <h2 class="title">聯絡 Contact</h2>
+      <h2 class="title">聯絡</h2>
 
       <div class="contact fade">
         <div class="info">
           <ul class="c-list">
-            <li><i class="fa-solid fa-envelope"></i><strong>Email：</strong><a href="mailto:liao950715@gmail.com">liao950715@gmail.com</a></li>
-            <li><i class="fa-brands fa-github"></i><strong>GitHub：</strong><a href="https://github.com/liao950715" target="_blank">github.com/liao950715</a></li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <strong>Email：</strong>
+              <a href="mailto:liao950715@gmail.com">liao950715@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-github"></i>
+              <strong>GitHub：</strong>
+              <a href="https://github.com/liao950715" target="_blank">github.com/liao950715</a>
+            </li>
           </ul>
         </div>
 
@@ -143,17 +250,45 @@
         </form>
       </div>
     </section>
+
   </main>
 
   <footer class="foot">
     <p>© 2025 廖子晴 All Rights Reserved.</p>
   </footer>
 
+  <!-- JS：使用 IntersectionObserver 讓區塊捲動到畫面中時才淡入顯示 -->
   <script>
-    const m=document.querySelector('.menu'),l=document.querySelector('.links');
-    m.addEventListener('click',()=>l.classList.toggle('open'));
-    const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:0.15});
-    document.querySelectorAll('.fade,.rise').forEach(el=>io.observe(el));
+    const m = document.querySelector('.menu'),
+          l = document.querySelector('.links');
+    m.addEventListener('click', () => l.classList.toggle('open'));
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+
+        const el = e.target;
+
+        // 原本的淡入動畫
+        if (el.classList.contains('fade') || el.classList.contains('rise')) {
+          el.classList.add('in');
+        }
+
+        // Skills 的圓形 progress 動畫
+        if (el.classList.contains('circle')) {
+          const target = el.dataset.val || "0";
+          el.style.setProperty('--val', target);
+        }
+
+        // 只需要觸發一次就好
+        io.unobserve(el);
+      });
+    }, { threshold: 0.3 });
+
+    // 觀察要淡入的元素 & circle
+    document
+      .querySelectorAll('.fade,.rise,.circle')
+      .forEach(el => io.observe(el));
   </script>
 </body>
 </html>
