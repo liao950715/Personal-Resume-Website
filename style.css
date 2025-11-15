@@ -75,7 +75,7 @@ body {
   border-radius: 999px;           /* 膠囊形狀 */
 }
 
-/* hover 效果：背景微藍、字變主色 */
+/* hover 效果 */
 .links a:hover {
   background: rgba(102, 153, 204, .1);
   color: var(--p);
@@ -103,18 +103,13 @@ body {
    Section 通用版型
 ================================================== */
 .sec {
-  padding: 72px 20px;              /* 上下留白 */
-  max-width: 1100px;               /* 版心寬度 */
-  margin: 0 auto;                  /* 置中 */
+  padding: 72px 20px;
+  max-width: 1100px;
+  margin: 0 auto; 
 }
 
-/* 有特別底色的 section */
-.sec.alt {
-  background: var(--alt);
-  border-radius: var(--r);
-}
 
-/* 各區塊標題（左邊有色條） */
+/* 各區塊標題 */
 .title {
   margin: 0 0 24px;
   font-size: 28px;
@@ -122,7 +117,7 @@ body {
   padding-left: 14px;
 }
 
-/* 標題左邊的主色直條 */
+/* 標題左邊的那條線 */
 .title::before {
   content: "";
   position: absolute;
@@ -420,7 +415,8 @@ body {
   height: 400px;                   /* 卡片內的圖片高度 */
   object-fit: contain;                /* 強迫拉伸填滿：fill,不變形：contain */
   border-radius: 14px;
-  box-shadow: var(--s);
+  box-shadow: none;
+  background: none;   
   flex-shrink: 0;                  /* 不要被擠扁 */
 }
 
